@@ -145,7 +145,7 @@ ISR(USART1_RX_vect)
 	Terminal.handle(ch);
 }
 #elif defined(__AVR_ATmega328P__)
-ISR(USART0_RX_vect)
+ISR(USART_RX_vect)
 {
 	char ch = UDR;
 	Terminal.handle(ch);
