@@ -138,11 +138,21 @@ cTerminal::~cTerminal()
 }
 
 
-ISR(USART_RX_vect)
+#if defined(__AVR_ATmega2560__)
+ISR(USART1_RX_vect)
 {
 	char ch = UDR;
 	Terminal.handle(ch);
 }
+#elif defined(__AVR_ATmega328P__)
+ISR(USART0_RX_vect)
+{
+	char ch = UDR;
+	Terminal.handle(ch);
+}
+#else
+#warning "AVR not supported"
+#endif
 
 const dbg_entry helpEntry = {help, "h"};
 

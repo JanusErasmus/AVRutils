@@ -7,7 +7,6 @@
 #define UCSRC           UCSR1C
 #define UBRRL           UBRR1L
 #define UDR             UDR1
-#define USART_RX_VECT   USART1_RX_vect
 #endif
 
 #if defined(__AVR_ATmega328P__)
@@ -16,7 +15,6 @@
 #define UCSRC           UCSR0C
 #define UBRRL           UBRR0L
 #define UDR             UDR0
-#define USART_RX_VECT   USART0_RX_vect
 #endif
 
 #ifndef UCSRA
