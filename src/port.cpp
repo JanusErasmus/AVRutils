@@ -1,6 +1,7 @@
 #include "port.h"
 
 
+#if defined(__AVR_ATmega2560__)
 const volatile uint8_t* DDRn[] =
 {
 		&DDRA,
@@ -39,6 +40,47 @@ const volatile uint8_t* PINn[] =
 		&PINH,
 		&PINJ,
 };
+#elif defined(__AVR_ATmega328P__)
+const volatile uint8_t* DDRn[] =
+{
+        0,
+        &DDRB,
+        &DDRC,
+        &DDRD
+};
+
+const volatile uint8_t* PORTn[] =
+{
+        0,
+        &PORTB,
+        &PORTC,
+        &PORTD
+};
+
+const volatile uint8_t* PINn[] =
+{
+        0,
+        &PINB,
+        &PINC,
+        &PIND
+};
+#else
+#warning "AVR not supported"
+const volatile uint8_t* DDRn[] =
+{
+      0
+};
+
+const volatile uint8_t* PORTn[] =
+{
+      0
+};
+
+const volatile uint8_t* PINn[] =
+{
+       0
+};
+#endif
 
 cPort::cPort(uint8_t pin_definition) : mPinDefinition(pin_definition)
 {

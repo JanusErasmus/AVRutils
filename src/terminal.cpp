@@ -14,10 +14,10 @@ cTerminal::cTerminal()
 
 	mystdio_init();
 
-	UCSR1A = _BV(U2X1); //Double speed mode USART0
-	UCSR1B = _BV(RXEN1) | _BV(TXEN1) | _BV(RXCIE1);
-	UCSR1C = _BV(UCSZ00) | _BV(UCSZ01);
-	UBRR1L = (uint8_t)( (F_CPU + 115200 * 4L) / (115200 * 8L) - 1 );
+	UCSRA = _BV(U2X0); //Double speed mode USART0
+	UCSRB = _BV(RXEN0) | _BV(TXEN0) | _BV(RXCIE0);
+	UCSRC = _BV(UCSZ00) | _BV(UCSZ01);
+	UBRRL = (uint8_t)( (F_CPU + 115200 * 4L) / (115200 * 8L) - 1 );
 
 	printp("Terminal started\n");
 }
@@ -25,12 +25,12 @@ cTerminal::cTerminal()
 
 void  cTerminal::enableInput()
 {
-	UCSR1B |= _BV(RXCIE1);
+	UCSRB |= _BV(RXCIE0);
 }
 
 void  cTerminal::disableInput()
 {
-	UCSR1B &= ~(_BV(RXCIE1));
+	UCSRB &= ~(_BV(RXCIE0));
 }
 
 void cTerminal::run()
@@ -137,9 +137,10 @@ cTerminal::~cTerminal()
 {
 }
 
-ISR(USART1_RX_vect)
+
+ISR(USART_RX_vect)
 {
-	char ch = UDR1;
+	char ch = UDR;
 	Terminal.handle(ch);
 }
 

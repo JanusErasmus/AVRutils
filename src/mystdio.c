@@ -1,17 +1,19 @@
 #include <stdio.h>
 #include <avr/io.h>
 
+#include "mystdio.h"
+
 static int putch(char ch, FILE *s)
 {
-	while (!(UCSR1A & _BV(UDRE0)));
+	while (!(UCSRA & _BV(UDRE0)));
 
 	if(ch == '\n')
 	{
-		UDR1 = '\r';
-		while (!(UCSR1A & _BV(UDRE0)));
+		UDR = '\r';
+		while (!(UCSRA & _BV(UDRE0)));
 	}
 
-	UDR1 = ch;
+	UDR = ch;
 
 	return 0;
 }

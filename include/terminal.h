@@ -3,6 +3,10 @@
 #include <stdio.h>
 #include <avr/pgmspace.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #define printp(_x, ...) printf_P(PSTR(_x), ##__VA_ARGS__);
 
 typedef void (*dbg_func)(uint8_t argc, char **argv);
@@ -40,4 +44,7 @@ extern const dbg_entry helpEntry;
 extern const dbg_entry* dbg_entries[];
 extern cTerminal Terminal;
 
+#ifdef __cplusplus
+}
+#endif
 #endif /* TERMINAL_H_ */
