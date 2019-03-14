@@ -12,7 +12,7 @@
 				</extensions>
 			</storageModule>
 			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
-				<configuration artifactExtension="a" artifactName="${ProjName}" buildArtefactType="de.innot.avreclipse.buildArtefactType.staticLib" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=de.innot.avreclipse.buildArtefactType.staticLib,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release" cleanCommand="rm -rf" description="" id="de.innot.avreclipse.configuration.lib.release.2024216208" name="Release" parent="de.innot.avreclipse.configuration.lib.release">
+				<configuration artifactExtension="a" artifactName="${ProjName}" buildArtefactType="de.innot.avreclipse.buildArtefactType.staticLib" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=de.innot.avreclipse.buildArtefactType.staticLib,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release" cleanCommand="rm -rf" description="" id="de.innot.avreclipse.configuration.lib.release.2024216208" name="Release" optionalBuildProperties="org.eclipse.cdt.docker.launcher.containerbuild.property.volumes=,org.eclipse.cdt.docker.launcher.containerbuild.property.selectedvolumes=" parent="de.innot.avreclipse.configuration.lib.release">
 					<folderInfo id="de.innot.avreclipse.configuration.lib.release.2024216208." name="/" resourcePath="">
 						<toolChain id="de.innot.avreclipse.toolchain.winavr.lib.release.32816527" name="AVR-GCC Toolchain" superClass="de.innot.avreclipse.toolchain.winavr.lib.release">
 							<option id="de.innot.avreclipse.toolchain.options.toolchain.objdump.lib.release.166616221" name="Generate Extended Listing (Source + generated Assembler)" superClass="de.innot.avreclipse.toolchain.options.toolchain.objdump.lib.release"/>
@@ -26,7 +26,7 @@
 							<tool id="de.innot.avreclipse.tool.compiler.winavr.lib.release.1455631638" name="AVR Compiler" superClass="de.innot.avreclipse.tool.compiler.winavr.lib.release">
 								<option id="de.innot.avreclipse.compiler.option.debug.level.1436286234" name="Generate Debugging Info" superClass="de.innot.avreclipse.compiler.option.debug.level" value="de.innot.avreclipse.compiler.option.debug.level.none" valueType="enumerated"/>
 								<option id="de.innot.avreclipse.compiler.option.optimize.173800051" name="Optimization Level" superClass="de.innot.avreclipse.compiler.option.optimize" value="de.innot.avreclipse.compiler.optimize.size" valueType="enumerated"/>
-								<option id="de.innot.avreclipse.compiler.option.incpath.1916454388" name="Include Paths (-I)" superClass="de.innot.avreclipse.compiler.option.incpath" useByScannerDiscovery="false" valueType="includePath">
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="de.innot.avreclipse.compiler.option.incpath.1916454388" name="Include Paths (-I)" superClass="de.innot.avreclipse.compiler.option.incpath" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="../include"/>
 								</option>
 								<inputType id="de.innot.avreclipse.compiler.winavr.input.494714143" name="C Source Files" superClass="de.innot.avreclipse.compiler.winavr.input"/>
@@ -34,7 +34,7 @@
 							<tool id="de.innot.avreclipse.tool.cppcompiler.lib.release.1839751335" name="AVR C++ Compiler" superClass="de.innot.avreclipse.tool.cppcompiler.lib.release">
 								<option id="de.innot.avreclipse.cppcompiler.option.debug.level.1781062310" name="Generate Debugging Info" superClass="de.innot.avreclipse.cppcompiler.option.debug.level" value="de.innot.avreclipse.cppcompiler.option.debug.level.none" valueType="enumerated"/>
 								<option id="de.innot.avreclipse.cppcompiler.option.optimize.802302282" name="Optimization Level" superClass="de.innot.avreclipse.cppcompiler.option.optimize" value="de.innot.avreclipse.cppcompiler.optimize.size" valueType="enumerated"/>
-								<option id="de.innot.avreclipse.cppcompiler.option.incpath.293556027" name="Include Paths (-I)" superClass="de.innot.avreclipse.cppcompiler.option.incpath" useByScannerDiscovery="false" valueType="includePath">
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="de.innot.avreclipse.cppcompiler.option.incpath.293556027" name="Include Paths (-I)" superClass="de.innot.avreclipse.cppcompiler.option.incpath" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="../include"/>
 								</option>
 								<inputType id="de.innot.avreclipse.cppcompiler.input.481429293" superClass="de.innot.avreclipse.cppcompiler.input"/>
